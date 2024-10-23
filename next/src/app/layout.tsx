@@ -1,3 +1,4 @@
+import { jaJP } from '@clerk/localizations'
 import { ClerkProvider } from '@clerk/nextjs'
 import type { Metadata } from 'next'
 import DefaultTemplate from './components/templates/DefaultTemplate'
@@ -18,7 +19,7 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning>
       <body>
         <Providers>
-          <ClerkProvider>
+          <ClerkProvider localization={jaJP}>
             <DefaultTemplate>{children}</DefaultTemplate>
           </ClerkProvider>
         </Providers>
